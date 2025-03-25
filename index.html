@@ -3,31 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Dealership | Quality Used Cars</title>
+    <title>City Auto Sales | Quality Used Cars</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logo">YourDealer</div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="inventory.html">Inventory</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+    <!-- Header (Matches Rossendale) -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">CITY AUTO SALES</div>
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <a href="inventory.html">Inventory</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Search -->
     <section class="hero">
-        <h1>Quality Pre-Owned Vehicles</h1>
-        <a href="inventory.html" class="cta-button">View Inventory</a>
+        <div class="hero-content">
+            <h1>Quality Pre-Owned Vehicles</h1>
+            <div class="search-box">
+                <input type="text" placeholder="Search make, model...">
+                <button>Search</button>
+            </div>
+        </div>
     </section>
 
-    <!-- Featured Cars -->
+    <!-- Featured Cars Grid -->
     <section class="featured-cars">
-        <h2>Featured Vehicles</h2>
-        <div class="car-grid" id="featured-cars">
-            <!-- Filled by JavaScript -->
+        <div class="container">
+            <h2>Featured Vehicles</h2>
+            <div class="car-grid">
+                <!-- Cars will load here via JavaScript -->
+            </div>
         </div>
     </section>
 

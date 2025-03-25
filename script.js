@@ -1,35 +1,40 @@
-// Sample car data
+// Sample car data (like Rossendale's inventory)
 const cars = [
     {
-        make: "Toyota",
-        model: "Camry",
-        year: 2022,
-        price: 22000,
-        image: "images/camry.jpg"
+        make: "Audi",
+        model: "A4",
+        year: 2021,
+        price: 28900,
+        image: "images/audi-a4.jpg",
+        mileage: "18,000"
     },
     {
         make: "BMW",
-        model: "X5",
-        year: 2021,
-        price: 45000,
-        image: "images/x5.jpg"
+        model: "3 Series",
+        year: 2022,
+        price: 32500,
+        image: "images/bmw-3.jpg",
+        mileage: "12,500"
     }
 ];
 
-// Render featured cars
+// Render cars to the grid
 function renderCars() {
-    const container = document.getElementById('featured-cars');
+    const grid = document.querySelector('.car-grid');
     
     cars.forEach(car => {
-        const carElement = document.createElement('div');
-        carElement.className = 'car-card';
-        carElement.innerHTML = `
+        const carCard = document.createElement('div');
+        carCard.className = 'car-card';
+        carCard.innerHTML = `
             <img src="${car.image}" alt="${car.make} ${car.model}">
-            <h3>${car.year} ${car.make} ${car.model}</h3>
-            <p>$${car.price.toLocaleString()}</p>
-            <button class="details-btn">View Details</button>
+            <div class="car-info">
+                <h3>${car.year} ${car.make} ${car.model}</h3>
+                <p>$${car.price.toLocaleString()}</p>
+                <p>${car.mileage} miles</p>
+                <a href="#" class="view-btn">View Details</a>
+            </div>
         `;
-        container.appendChild(carElement);
+        grid.appendChild(carCard);
     });
 }
 
